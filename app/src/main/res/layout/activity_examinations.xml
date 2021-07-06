@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/examinations_background"
+    android:padding="5dp"
+    tools:context=".Examinations">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationExam"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="testpaper.json"></com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/examinationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/baloo_da"
+            android:text="EXAMINATIONS"
+            android:textColor="#F8F8F8"
+            android:textSize="26sp"></TextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/examList"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:dividerHeight="0dp"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/setRemainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/baloo_da"
+        android:text="set remainder"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F7B4A7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/examList" />
+
+    <Button
+        android:id="@+id/clearRemainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/baloo_da"
+        android:text="clear remainder"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F7B4A7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setRemainder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
