@@ -17,6 +17,46 @@
         app:srcCompat="@drawable/ic_baseline_menu_24" />
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navBarOpen"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/curved_entry_gradient"
+            android:orientation="horizontal">
+
+            <ViewFlipper
+                android:id="@+id/schoolImagesFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right"></ViewFlipper>
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right|center_horizontal"
+            android:layout_marginTop="-15dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="scribble.json"
+            app:lottie_loop="true"></com.airbnb.lottie.LottieAnimationView>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/navbar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -200,6 +240,20 @@
             android:fontFamily="@font/baloo_da"
             android:padding="2dp"
             android:text="TimeTable"
+            android:textAlignment="center"
+            android:textColor="#195d7e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nav_adminPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:drawableLeft="@drawable/admin_panel_icon"
+            android:fontFamily="@font/baloo_da"
+            android:padding="2dp"
+            android:text="Admin Panel"
             android:textAlignment="center"
             android:textColor="#195d7e"
             android:textSize="18sp"

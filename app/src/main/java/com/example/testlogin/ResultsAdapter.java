@@ -51,7 +51,7 @@ public class ResultsAdapter extends BaseAdapter {
         image.setImageDrawable(context.getResources().getDrawable(R.drawable.result_icon));
         subjectValue.setText(tempResult.getSubjectVal());
         scoreValue.setText(((Double)tempResult.getScoreVal()).toString());
-        percentageValue.setProgress((int) tempResult.getPercentageVal());
+        percentageValue.setProgress((int) tempResult.getMaximumMarks());
 
         DecimalFormat df = new DecimalFormat("##.#");
         Double subjectpercentage=(tempResult.getScoreVal()/100)*100;

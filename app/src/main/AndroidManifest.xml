@@ -12,22 +12,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestLogin">
-        <activity android:name=".Attendence"></activity>
-        <activity android:name=".LogLeave" />
-
-        <activity android:name=".teacherOnLeave" />
-        <activity android:name=".drawer" />
-        <activity android:name=".FeePayment" />
-        <activity android:name=".Announcements" />
-        <activity android:name=".Examinations" />
-        <activity android:name=".results" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AdminPanel"></activity>
+        <activity android:name=".forgotPassword" />
+        <activity android:name=".AdminTeacherLeave" />
+        <activity android:name=".AdminAttendence" />
+        <activity android:name=".AdminResult" />
+        <activity android:name=".AdminAnnouncement" />
+        <activity android:name=".AdminTeacher" />
+        <activity android:name=".AdminTimetable" />
+        <activity android:name=".AdminStudent" />
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Attendence" />
+        <activity android:name=".LogLeave" />
+        <activity android:name=".Timetable" />
+        <activity android:name=".teacherOnLeave" />
+        <activity android:name=".drawer" />
+        <activity android:name=".FeePayment" />
+        <activity android:name=".Announcements" />
+        <activity android:name=".Examinations" />
+        <activity android:name=".results" />
+        <activity android:name=".MainActivity" />
 
         <receiver
             android:name=".AlarmReciever"

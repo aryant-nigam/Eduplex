@@ -1,16 +1,14 @@
 package com.example.testlogin;
 
-import android.widget.ImageView;
-
 public class ResultClass {
     private String subjectVal;
     private double scoreVal;
-    private double percentageVal;
-
-    public ResultClass(String subjectVal, double scoreVal, double percentageVal) {
+    private double maximumMarks;
+    public ResultClass(){}
+    public ResultClass(String subjectVal, double scoreVal, double maximumMarks) {
         this.subjectVal = subjectVal;
         this.scoreVal = scoreVal;
-        this.percentageVal = percentageVal;
+        this.maximumMarks = maximumMarks;
     }
 
     public String getSubjectVal() { return subjectVal; }
@@ -21,7 +19,7 @@ public class ResultClass {
 
     public void setScoreVal(double scoreVal) { this.scoreVal = scoreVal; }
 
-    public double getPercentageVal() { return percentageVal; }
+    public double getMaximumMarks() { return maximumMarks; }
 
-    public void setPercentageVal(double percentageVal) { this.percentageVal = percentageVal; }
+    public void setMaximumMarks(double maximumMarks) { this.maximumMarks = maximumMarks; }
 }
