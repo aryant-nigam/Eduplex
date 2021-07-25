@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adminpanel_bacground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="TIMETABLE PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+        <RadioGroup
+            android:id="@+id/timetablePanelUtility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <RadioButton
+                android:id="@+id/rAtt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Add Timetable"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rAtt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Remove Timetable"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/proceedATP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/timetablePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="@color/colorGrey"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/TTclass"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:dropDownSelector="@drawable/dropdown"
+                android:elevation="5dp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/TTsection"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:dropDownSelector="@drawable/dropdown"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/TTday"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:dropDownSelector="@drawable/dropdown"
+                android:visibility="gone" />
+
+            <Switch
+                android:id="@+id/enableMoreEntries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:buttonTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:inputType="textPersonName"
+                android:text="Enable Multiple Entries"
+                android:textAlignment="inherit"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/TTsubjectName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp"
+                android:dropDownSelector="@drawable/dropdown"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/TTsubjectTiming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="HH:MM (AM/PM)-HH:MM (AM/PM)"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/TTsubjectTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="Subject Teacher"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/addMoreEntries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:padding="3dp"
+                android:text="Add it"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/addTimetableButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:padding="3dp"
+                android:text="Add Single Subject"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/deleteTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:padding="3dp"
+                android:text="Delete Timetable"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

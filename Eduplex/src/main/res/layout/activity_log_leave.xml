@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/leave_application_background"
+    android:orientation="vertical"
+    tools:context=".LogLeave">
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="leave_animation.json">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/logLeaveTitle"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/baloo_da"
+            android:padding="5dp"
+            android:text="LOG LEAVE"
+            android:textAlignment="center"
+            android:textColor="#F8F8F8"
+            android:textSize="30sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/curved_entry_black"
+        android:backgroundTint="#80494444"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll4">
+
+        <EditText
+            android:id="@+id/LeaveSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#f0abc1"
+            android:fontFamily="sans-serif"
+            android:hint="Subject"
+            android:inputType="text|textMultiLine"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/LeaveDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/leave_application_elementbg2"
+            android:gravity="center"
+            android:hint="description..."
+            android:inputType="text|textMultiLine"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#DCA991"
+            android:text="I hereby Confirm that I abide by dicipline and decorem of my Institute in the above request"
+            android:textColor="#F7B4A7" />
+
+        <EditText
+            android:id="@+id/emailPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#f0abc1"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="sans-serif"
+            android:hint="Your registered mail password here"
+            android:inputType="textPassword"
+            android:lines="5"
+            android:maxLines="5"
+            android:padding="5dp"
+            android:textColor="#94DDDE"
+            android:textColorHint="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/logLeaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/curved_entry_black"
+            android:fontFamily="@font/baloo_da"
+            android:gravity="center"
+            android:text="Log leave"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#D1A0A0" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/load2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/progressbar_background"
+        android:indeterminateTint="@color/colorPink"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

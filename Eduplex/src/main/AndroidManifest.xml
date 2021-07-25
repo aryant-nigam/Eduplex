@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.Eduplex">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestLogin">
+        <activity
+            android:name=".AdminExaminations"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".CalenderActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminPanel"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".forgotPassword"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminTeacherLeave"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminAttendence"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminResult"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminAnnouncement"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminTeacher"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminTimetable"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminStudent"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".splashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Attendence"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LogLeave"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Timetable"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".teacherOnLeave"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".drawer"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".FeePayment"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Announcements"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Examinations"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".results"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <receiver
+            android:name=".AlarmReciever"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

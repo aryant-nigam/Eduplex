@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Se"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adminpanel_bacground"
+    tools:context=".AdminTeacherLeave">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="TEACHER ON  PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+
+        <LinearLayout
+            android:id="@+id/TOLPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="@color/colorGrey"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/datePanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/leaveDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.25"
+                    android:hint="Choose Leave Date"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAqua"
+                    android:textColorHint="@color/colorPink"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/selectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/calender" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/TOLid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:ems="10"
+                android:hint="Teacher's ID"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <EditText
+                android:id="@+id/TOLmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:ems="10"
+                android:hint="Message"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <Button
+                android:id="@+id/addLeaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Add Leave"
+
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/removeLeaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Remove Leave"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+<RadioGroup
+            android:id="@+id/teacherOnLeaveUtility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <RadioButton
+                android:id="@+id/TOL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Add Teacher's Leave"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/TOL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Remove Teacher's Leave"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/proceedTOL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+-->

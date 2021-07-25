@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adminpanel_bacground"
+    tools:context=".AdminResult">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="RESULTS PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/resultPanelUtility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPink"
+                    android:text="Add Result"
+                    android:textColor="@color/colorAqua"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPink"
+                    android:text="Remove Result"
+                    android:textColor="@color/colorAqua"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/proceedRP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Proceed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/resultPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/curved_entry_black"
+                android:backgroundTint="@color/colorGrey"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/RregNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_black"
+                    android:ems="10"
+                    android:hint="registrationNumber"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPink"
+                    android:textColorHint="@color/colorAqua" />
+
+                <Spinner
+                    android:id="@+id/rClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <Spinner
+                    android:id="@+id/rSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <Spinner
+                    android:id="@+id/testType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <Spinner
+                    android:id="@+id/rSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <EditText
+                    android:id="@+id/marksScored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_black"
+                    android:ems="10"
+                    android:hint="Marks Scored"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPink"
+                    android:textColorHint="@color/colorAqua" />
+
+                <Spinner
+                    android:id="@+id/maxMarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <Button
+                    android:id="@+id/addResultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Add Result"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/removeResultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Remove Result"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

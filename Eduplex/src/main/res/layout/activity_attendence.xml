@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/attendence_background"
+    tools:context=".Attendence">
+
+
+    <ProgressBar
+        android:id="@+id/load3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/progressbar_background"
+        android:indeterminateTint="@color/colorPink"
+        android:elevation="8dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="graph.json"
+            app:lottie_loop="false"></com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/attendenceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo_da"
+            android:padding="5dp"
+            android:text="ATTENDENCE"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="724dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <LinearLayout
+            android:id="@+id/attendenceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#80494444"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:text="Days Attended : "
+                    android:textColor="#F0ABC1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:text="Total Days Ran : "
+                    android:textColor="#F0ABC1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:text="Attendence :"
+                    android:textAlignment="gravity"
+                    android:textColor="#F0ABC1"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/daysAttended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint="0"
+                    android:padding="3dp"
+                    android:textColor="#94DDDE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/daysRan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint="0"
+                    android:padding="3dp"
+                    android:textColor="#94DDDE"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/attendencePercentageProgress"
+
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="86dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:padding="3dp"
+                        android:progress="71"
+                        android:progressTint="#f7b4a7"
+                        android:scaleY="4" />
+
+                    <TextView
+                        android:id="@+id/attendencePercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:fontFamily="@font/baloo_da"
+                        android:hint="0.0%"
+                        android:padding="3dp"
+                        android:textColor="#94DDDE"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/baloo_da"
+            android:padding="3dp"
+            android:text="Status :"
+            android:textAlignment="center"
+            android:textColor="@color/colorAqua"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/requestCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/baloo_da"
+            android:text="Request for correction  with suitable reference"
+            android:textColor="#F0ABC1" />
+
+        <LinearLayout
+            android:id="@+id/requestCorrectionCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#80494444"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/correctionDay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+
+                android:spinnerMode="dropdown"
+                android:textAlignment="center">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/emailPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/input_bg"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="registered mail password"
+                android:inputType="textPassword"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/requestCorrection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_white"
+                android:fontFamily="@font/baloo_da"
+                android:padding="5dp"
+                android:text="request correction"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#F7B4A7" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

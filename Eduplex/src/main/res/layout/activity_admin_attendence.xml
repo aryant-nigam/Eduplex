@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adminpanel_bacground"
+    tools:context=".AdminAttendence">
+
+    <ProgressBar
+        android:id="@+id/load4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/progressbar_background"
+        android:indeterminateTint="@color/colorPink"
+        android:visibility="gone"
+        android:elevation="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="ATTENDENCE PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+        <RadioGroup
+            android:id="@+id/attendencePanelUtility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <RadioButton
+                android:id="@+id/rAtt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Punch Attendence"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rAtt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Push Attendence Correction"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/proceedATP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/attendencePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="@color/colorGrey"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/classAtt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp" />
+
+            <Spinner
+                android:id="@+id/sectionAtt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp" />
+
+            <EditText
+                android:id="@+id/regNoAtt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/curved_entry_black"
+                android:ems="10"
+                android:hint="Registration Number"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <Spinner
+                android:id="@+id/presentAbsent"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="3dp" />
+
+            <Button
+                android:id="@+id/punchAttendence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Punch Attendence"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/punchAttendenceCorrection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Push Attendence Correction"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

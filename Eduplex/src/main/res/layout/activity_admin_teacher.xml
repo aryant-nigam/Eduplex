@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adminpanel_bacground"
+    android:foregroundTint="@color/colorOrange"
+    tools:context=".AdminTeacher">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="TEACHER'S PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp"></TextView>
+
+        <RadioGroup
+            android:id="@+id/teachersPanelUtility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/addT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/colorOrange"
+                android:text="Add  New Teacher's Record"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/delT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/colorOrange"
+                android:text="Delete Teachers Record"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/proceedATP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:fontFamily="@font/baloo_da"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/AddTeacherPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#80494444"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/tid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="Teacher's Id"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorPink"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/tname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="Teacher's Name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorPink"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/tClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/tSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/tmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="Teacher's  Email"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorPink"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/addTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:fontFamily="@font/baloo_da"
+                android:text="Add Teacher"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/removeTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:fontFamily="@font/baloo_da"
+                android:text="Remove Teacher"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

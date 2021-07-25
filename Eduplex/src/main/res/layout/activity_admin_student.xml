@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminStudent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/adminpanel_bacground"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/addStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="ADD STUDENT"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+        <RadioGroup
+            android:id="@+id/studentPanelUtility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <RadioButton
+                android:id="@+id/addS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Add Student"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/delS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPink"
+                android:text="Remove Student"
+                android:textColor="@color/colorAqua"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/proceedSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Proceed"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/addStudentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="#80494444"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/newStudentResgistrationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="Registration Number"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <Spinner
+                android:id="@+id/newStudentClass"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <Spinner
+                android:id="@+id/newStudentSection"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <EditText
+                android:id="@+id/newStudentFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <EditText
+                android:id="@+id/newStudentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/newStudentPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint="password"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAqua"
+                    android:textColorHint="@color/colorPink" />
+
+                <Button
+                    android:id="@+id/generatePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_entry_black"
+                    android:backgroundTint="@color/colorPink"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="GET"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/newStudentDueFee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/baloo_da"
+                android:hint="Due Fee"
+                android:inputType="number"
+                android:textColor="@color/colorAqua"
+                android:textColorHint="@color/colorPink" />
+
+            <Spinner
+                android:id="@+id/newStudentFeeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <Button
+                android:id="@+id/addStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="add student"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/removeStudentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="@color/colorGrey"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/removeStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_gradient"
+                android:backgroundTint="@color/colorOrange"
+                android:fontFamily="@font/baloo_da"
+                android:text="Remove Student"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
