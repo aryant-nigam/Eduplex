@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminExaminations"
+    android:background="@drawable/adminpanel_bacground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/baloo_da"
+            android:shadowColor="#EFDFDF"
+            android:text="EXAMINATIONS PANEL"
+            android:textAlignment="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/examsPanelUtility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonAEP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPink"
+                    android:text="Add Examination Schedule"
+                    android:textColor="@color/colorAqua"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2AEP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPink"
+                    android:text="Remove Examination Schedule"
+                    android:textColor="@color/colorAqua"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/proceedAEP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Proceed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/examinationPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/curved_entry_black"
+                android:backgroundTint="@color/colorGrey"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/examClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp" />
+
+                <Spinner
+                    android:id="@+id/examSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp" />
+
+                <EditText
+                    android:id="@+id/examDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_black"
+                    android:drawableLeft="@drawable/calender"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint="Exam Date  : YYYY-MM-DD"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPink"
+                    android:textColorHint="@color/colorAqua"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/startHour"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/startMin"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/examDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp" />
+
+                <Button
+                    android:id="@+id/addExam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Add Exam Schedule"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/removeExam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/curved_entry_gradient"
+                    android:backgroundTint="@color/colorOrange"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="Remove Exam Schedule"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

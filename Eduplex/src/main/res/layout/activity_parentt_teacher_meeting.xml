@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/parent_teacher_meeting_background"
+    tools:context=".ParentTeacherMeeting"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="complaints.json"
+            app:lottie_speed="0.5"></com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/ParenTeacherMeetingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/baloo_da"
+            android:padding="5dp"
+            android:text="PARENT TEACHER MEETING"
+            android:textAlignment="center"
+            android:textColor="#F8F8F8"
+            android:textSize="24sp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/meetingCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/curved_entry_black"
+        android:backgroundTint="@color/colorGrey"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="7dp"
+            android:src="@drawable/parent_teacher_meeting_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/curved_entry_black"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:fadingEdgeLength="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/baloo_da"
+                android:shadowColor="#474242"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="MEETING  SCHEDULE"
+                android:textAlignment="center"
+                android:textColor="@color/colorOrange"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:shadowColor="#4A4646"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Date :"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPink"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/meetingDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint=": date"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:shadowColor="#4A4646"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Time : "
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPink"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/meetingTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint=": time"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/meetingStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="3dp"
+                    android:shadowColor="#4A4646"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Starts In : "
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPink"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/timeRemaining"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo_da"
+                    android:hint=": time remaining"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/enterMeeting"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/curved_entry_white"
+                android:elevation="5dp"
+                android:fontFamily="@font/baloo_da"
+                android:text="Enter Meeting"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorOrange" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
